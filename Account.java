@@ -1,3 +1,6 @@
+
+// DONE
+
 abstract class Account {
   protected Customer customer;
   protected double balance;
@@ -5,11 +8,10 @@ abstract class Account {
   protected Transaction[] transactions ;
   protected static int accNumber = 0;
   protected int tranIndex;
-
   public Account(Customer customer){
     this.customer = customer;
     this.balance = 0;
-    this.accountNumber = ""+ ++accNumber;
+    this.accountNumber = String.format("A%010d",++accNumber);
     this.transactions = new Transaction [20];
     this.tranIndex = 0;
   }
@@ -24,10 +26,9 @@ abstract class Account {
   }
   @Override
   public String toString() {
-    return "[Customer: "  + this.customer + "Balance: " + this.balance + "Account Number: " + this.accountNumber;
+    return "Account: " + accountNumber + "\nOwner: " + customer.getName() + "\nType of Customer: " + customer.getType() + "\nBalance: $" + balance;
   }
   public abstract double deposit(double amount);
   public abstract double withdraw(double amount);
 }
-
 

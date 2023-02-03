@@ -1,3 +1,4 @@
+
 public class Transaction {
   private String customerNumber;
   private int transactionType;
@@ -5,11 +6,10 @@ public class Transaction {
   private String date;
   private String fees;
 
-  public Transaction(String customerNumber, int transactionType, double amount, String date, String fees){
+  public Transaction(String customerNumber, int transactionType, double amount, String fees){
     this.customerNumber = customerNumber;
     this.transactionType = transactionType;
     this.amount = amount;
-    this.date = date;
     this.fees = fees;
   }
   public void processTran(){}
