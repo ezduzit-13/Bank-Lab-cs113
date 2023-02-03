@@ -1,6 +1,4 @@
 
-// DONE
-
 abstract class Account {
   protected Customer customer;
   protected double balance;
@@ -21,8 +19,8 @@ abstract class Account {
   public Customer getCustomer() {
     return customer;
   }
-  public static int getAccNumber() {
-    return accNumber;
+  public String getNumber() {
+    return accountNumber;
   }
   @Override
   public String toString() {
@@ -31,4 +29,3 @@ abstract class Account {
   public abstract double deposit(double amount);
   public abstract double withdraw(double amount);
 }
-

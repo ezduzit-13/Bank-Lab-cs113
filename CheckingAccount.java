@@ -1,5 +1,4 @@
 
-
 public class CheckingAccount extends Account {
   public CheckingAccount(Customer customer){
     super(customer);
@@ -25,8 +24,13 @@ public class CheckingAccount extends Account {
   public double addInterest(){
     double amount;
     amount = balance*customer.getCheckInterest();
-    transactions[tranIndex] = new Transaction(customer.getCustomerNumber(), 0, amount, "INT");
+    transactions[tranIndex++] = new Transaction(customer.getCustomerNumber(), 0, amount, "INT");
     balance += amount;
     return balance;
   }
 }
+
+
+
+
+
